@@ -15,9 +15,9 @@
     wget https://github.com/neovim/neovim/releases/download/stable/nvim-macos.tar.gz   
     xattr -c ./nvim-macos.tar.gz
     tar xzvf nvim-macos.tar.gz
-    mkdir -p ~/bin/; cp -r nvim-macos/bin/* $_
-    mkdir -p ~/share/; cp -r nvim-macos/share/* $_
-    mkdir -p ~/lib/; cp -r nvim-macos/lib/* $_
+    mkdir -p ~/.local/bin/; cp -r nvim-macos/bin/* $_
+    mkdir -p ~/.local/share/; cp -r nvim-macos/share/* $_
+    mkdir -p ~/.local/lib/; cp -r nvim-macos/lib/* $_
   '';
  
   enterShell = ''
