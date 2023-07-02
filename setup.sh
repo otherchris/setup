@@ -1,14 +1,9 @@
 #! /bin/bash
 
-# install and configure lunarvim
-#
-# install neovim
-wget https://github.com/neovim/neovim/releases/download/stable/nvim-macos.tar.gz
-xattr -c ./nvim-macos.tar.gz
-tar xzvf nvim-macos.tar.gz
-./nvim-macos/bin/nvim
+# install nix
 
-
-
-
+sh <(curl -L https://nixos.org/nix/install)
+nix-env -iA cachix -f https://cachix.org/api/v1/install
+cachix use devenv
+nix-env -if https://github.com/cachix/devenv/tarball/latest
 
